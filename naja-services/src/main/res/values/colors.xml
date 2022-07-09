@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimay">#5959f7</color>
+    <color name="colorPrimayDark">#002fc3</color>
+    <color name="colorPrimayLight">#9486ff</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorBackgroundSub">#F1F1F1</color>
+    <color name="colorPrimaryApp">#313236</color>
+    <color name="colorOnPrimaryApp">@color/white</color>
+    <color name="grayDeep">#757575</color>
+    <color name="colorSecondaryApp">#E64243</color>
+    <color name="grayText">#8C8989</color>
+    <color name="colorOnSurfaceApp">@color/colorPrimaryApp</color>
+    <color name="darkGray">#B3B6BE</color>
+    <color name="buttonDisabled">#DADADA</color>
+    <color name="colorText">#2C3E50</color>
+    <color name="colorAccent">#2ecb6d</color>
+    <color name="colorSecondaryAccent">#00baf2</color>
+    <color name="white_30">#33ffffff</color>
+
+
+</resources>

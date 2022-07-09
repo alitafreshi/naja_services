@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppEditText">
+        <item name="android:textColor">@color/colorPrimaryApp</item>
+        <item name="android:background">@drawable/background_edittext</item>
+        <item name="android:textSize">@dimen/normal_text</item>
+        <item name="android:minHeight">46dp</item>
+        <item name="android:paddingStart">@dimen/margin_16</item>
+        <item name="android:paddingEnd">@dimen/margin_16</item>
+    </style>
+
+    <style name="AyanAppEditText" parent="AppEditText"/>
+
+    <style name="MainCards">
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="cardCornerRadius">@dimen/half_radius</item>
+        <item name="cardElevation">@dimen/main_Elevation</item>
+        <item name="cardPreventCornerOverlap">false</item>
+        <item name="cardUseCompatPadding">true</item>
+    </style>
+
+    <style name="progressBarStyle">
+        <item name="colorControlActivated">@color/colorSecondaryApp</item>
+    </style>
+
+
+    <style name="historyListProgressBarStyle">
+        <item name="colorControlActivated">@color/grayText</item>
+    </style>
+
+    <style name="AppButton">
+        <item name="android:textColor">@drawable/enable_disable_button_text_color</item>
+        <item name="android:textSize">@dimen/sub_medium_text</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingStart">@dimen/margin_32</item>
+        <item name="android:paddingEnd">@dimen/margin_32</item>
+        <item name="android:clipToPadding">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:height">@dimen/margin_40</item>
+        <item name="android:background">@drawable/back_color_accent_button</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="textStyleKey">
+        <item name="android:textAppearance">?textAppearanceBody1</item>
+        <item name="android:textColor">@color/grayText</item>
+        <item name="android:layout_marginStart">@dimen/margin_8</item>
+        <item name="android:layout_marginEnd">@dimen/margin_8</item>
+    </style>
+
+    <style name="AyanDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+    </style>
+
+    <style name="DialogActivity" parent="Theme.AppCompat.Light.Dialog">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+    </style>
+
+</resources>

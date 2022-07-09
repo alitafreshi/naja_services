@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--One Input Bottom Sheet-->
+    <string name="tv_guide">The VIN number below is the last one registered by you for the license plate selected in the previous step. If required, please enter the new VIN in the box above.</string>
+    <string name="tv_Vin_error">This field cannot be empty.</string>
+    <string name="tv_auth_title">Authentication</string>
+    <string name="tv_entered_sended_code">Enter the code sent to the %s mobile number.</string>
+    <string name="sended_code_hint">Submit code</string>
+    <string name="tv_agree_and_continue">Confirm and continue</string>
+
+    <!--Accept Bottom Sheet-->
+    <string name="read_and_accept_rules">I read and accept the rules and regulations.</string>
+    <string name="tv_pay">pay</string>
+    <string name="rules">Terms and Conditions</string>
+
+</resources>

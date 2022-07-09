@@ -1,0 +1,16 @@
+<resources>
+
+    <!--One Input Bottom Sheet-->
+    <string name="tv_guide">شماره VIN زیر آخرین مورد ثبتی توسط شما برای پلاک انتخاب شده در مرحله قبل است . در صورت نیاز، لطفا VIN جدید را در کادر بالا وارد کنید.</string>
+    <string name="tv_Vin_error">این بخش نمی‌تواند خالی باشد.</string>
+    <string name="tv_auth_title">احراز هویت</string>
+    <string name="tv_entered_sended_code">کد ارسال شده به شماره موبایل %s را وارد کنید.</string>
+    <string name="sended_code_hint">کد ارسالی</string>
+    <string name="tv_agree_and_continue">تایید و ادامه</string>
+
+    <!--Accept Bottom Sheet-->
+    <string name="read_and_accept_rules">قوانین و مقررات را مطالعه کرده و می‌پذیرم.</string>
+    <string name="tv_pay">پرداخت</string>
+    <string name="rules">قوانین و مقررات</string>
+
+</resources>
