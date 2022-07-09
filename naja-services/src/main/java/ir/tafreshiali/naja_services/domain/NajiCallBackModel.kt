@@ -1,4 +1,4 @@
-package ir.tafreshiali.naja_services.callback.domain
+package ir.tafreshiali.naja_services.domain
 
 data class NajiCallBackModel(
     val input: String,

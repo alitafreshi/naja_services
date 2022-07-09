@@ -1,4 +1,4 @@
-package ir.tafreshiali.naja_services.callback.constance
+package ir.tafreshiali.naja_services.constance
 
 object NajaConstance {
     const val NAJA_CALL_BACK_PRODUCT = "najaCallBackProduct"

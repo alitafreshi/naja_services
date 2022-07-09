@@ -1,4 +1,4 @@
-package ir.tafreshiali.naja_services.callback.domain
+package ir.tafreshiali.naja_services.domain
 
 import android.content.Context
 import ir.ayantech.ayannetworking.api.AyanApi
@@ -7,9 +7,9 @@ import ir.ayantech.whygoogle.helper.formatAmount
 import ir.ayantech.whygoogle.helper.openUrl
 import ir.ayantech.whygoogle.helper.toJsonString
 import ir.tafreshiali.naja_services.R
-import ir.tafreshiali.naja_services.callback.constance.Endpoints
-import ir.tafreshiali.naja_services.callback.presentation.bottomsheet.AcceptRulesBottomSheet
-import ir.tafreshiali.naja_services.callback.presentation.bottomsheet.OneInputBottomSheet
+import ir.tafreshiali.naja_services.constance.Endpoints
+import ir.tafreshiali.naja_services.presentation.bottomsheet.AcceptRulesBottomSheet
+import ir.tafreshiali.naja_services.presentation.bottomsheet.OneInputBottomSheet
 
 open class BaseResultModel<T>(
     val Result: T,

@@ -1,4 +1,4 @@
-package ir.tafreshiali.naja_services.callback.presentation.bottomsheet
+package ir.tafreshiali.naja_services.presentation.bottomsheet
 
 import android.content.Context
 import android.view.LayoutInflater

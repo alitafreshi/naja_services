@@ -1,8 +1,8 @@
-package ir.tafreshiali.naja_services.callback.callback
+package ir.tafreshiali.naja_services.callback
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
-import ir.tafreshiali.naja_services.callback.constance.NajaConstance
+import ir.tafreshiali.naja_services.constance.NajaConstance
 
 fun  <T> AppCompatActivity.handleNajaGatewayCallBackUrl(
     url: String,
