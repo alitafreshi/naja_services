@@ -3,13 +3,13 @@ package ir.tafreshiali.naja_services.domain
 import android.content.Context
 import ir.ayantech.ayannetworking.api.AyanApi
 import ir.ayantech.pishkhancore.model.InquiryHistory
-import ir.ayantech.whygoogle.helper.formatAmount
 import ir.ayantech.whygoogle.helper.openUrl
 import ir.ayantech.whygoogle.helper.toJsonString
 import ir.tafreshiali.naja_services.R
 import ir.tafreshiali.naja_services.constance.Endpoints
 import ir.tafreshiali.naja_services.presentation.bottomsheet.AcceptRulesBottomSheet
 import ir.tafreshiali.naja_services.presentation.bottomsheet.OneInputBottomSheet
+import ir.tafreshiali.naja_services.util.formatAmount
 
 open class BaseResultModel<T>(
     val Result: T,
@@ -58,7 +58,11 @@ open class BaseNajiResultModel<T>(
                 AcceptRulesBottomSheet(
                     context = context,
                     rules = this@BaseNajiResultModel.Terms ?: "",
-                    acceptText = "${context.resources.getString(R.string.tv_pay)} ${this@BaseNajiResultModel.Fee?.formatAmount()}"
+                    acceptText = "${context.resources.getString(R.string.tv_pay)} ${
+                        this@BaseNajiResultModel.Fee?.formatAmount(
+                            context = context
+                        )
+                    }"
                 ) {
                     ayanApi.simpleCall<NajaServicesPaymentRequestOutput>(
                         Endpoints.NajaServicesPaymentRequest,
