@@ -9,7 +9,7 @@ import ir.tafreshiali.naja_services.constance.NajaConstance
  * 1 - first we use [substringAfter] with (?) [delimiter] and [split] the url with (&)
  * 2 - then we are searching for (product) Keyword and [split] it with (=) [delimiter] in the founded url in first step.
  * 3 - then we are searching for (key) Keyword and [split] it with (=) [delimiter] in the founded url in first step.
- * 4 - if the value of the (product) Keyword that founds in step 2 is contains [NajaConstance.TRAFFIC_BY_PLATE] we are passing the required information with in an intent */
+ * 4 - if the value of the (product) Keyword that founds in step 2 contains [NajaConstance.TRAFFIC_BY_PLATE] we are passing the required information with in an intent */
 fun <T> AppCompatActivity.handleNajaGatewayCallBackUrl(
     destinationActivity: Class<T>
 ) {
