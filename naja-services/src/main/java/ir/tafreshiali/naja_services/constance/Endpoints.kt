@@ -6,6 +6,7 @@ object Endpoints {
     const val NajaServicesInquiryPlateNumbers = "NajaServicesInquiryPlateNumbers"
     const val NajaServicesPaymentRequestData = "NajaServicesPaymentRequestData"
     const val NajaServicesInquiryDrivingLicenseNegativePoint = "NajaServicesInquiryDrivingLicenseNegativePoint"
+    const val NajaServicesInquiryDrivingLicenseStatus = "NajaServicesInquiryDrivingLicenseStatus"
 
 
 
