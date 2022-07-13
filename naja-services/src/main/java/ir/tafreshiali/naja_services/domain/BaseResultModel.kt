@@ -40,7 +40,10 @@ open class BaseNajiResultModel<T>(
                 OneInputBottomSheet(
                     context = context,
                     title = context.resources.getString(R.string.tv_auth_title),
-                    message = context.resources.getString(R.string.tv_entered_sended_code),
+                    message = context.resources.getString(
+                        R.string.tv_entered_sended_code,
+                        mobileNumber
+                    ),
                     hint = context.resources.getString(R.string.sended_code_hint),
                     action = context.resources.getString(R.string.tv_agree_and_continue),
                     suggestions = null,

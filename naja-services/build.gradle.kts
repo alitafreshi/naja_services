@@ -81,7 +81,7 @@ afterEvaluate {
                 artifactId = "naja-services"
 
                 // Version Library Name (Example : "1.0.0")
-                version = "0.0.9"
+                version = "0.0.10"
             }
         }
     }
