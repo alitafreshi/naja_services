@@ -7,7 +7,9 @@ object Endpoints {
     const val NajaServicesPaymentRequestData = "NajaServicesPaymentRequestData"
     const val NajaServicesInquiryDrivingLicenseNegativePoint = "NajaServicesInquiryDrivingLicenseNegativePoint"
     const val NajaServicesInquiryDrivingLicenseStatus = "NajaServicesInquiryDrivingLicenseStatus"
-
+    const val NajaServicesInquiryTrafficFinesCar = "NajaServicesInquiryTrafficFinesCar"	//	To Report Advertising Performance.
+    const val NajaServicesInquiryTrafficFinesMotorcycle = "NajaServicesInquiryTrafficFinesMotorcycle"	//	To Report Advertising Performance.
+    const val NajaServicesInquiryTrafficFinesCarSummary = "NajaServicesInquiryTrafficFinesCarSummary"	//	To Report Advertising Performance.
 
 
 }

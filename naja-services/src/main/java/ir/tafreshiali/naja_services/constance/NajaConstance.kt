@@ -7,3 +7,11 @@ object NajaConstance {
 
     const val KEY = "key"
 }
+
+object NajaGatewayConstance {
+    const val PRODUCT = "product"
+    const val KEY = "key"
+    const val PAYMENT_STATUS = "paymentstatus"
+    const val SUCCESS_STATUS = "1"
+    const val CANCEL_STATUS = "0"
+}
