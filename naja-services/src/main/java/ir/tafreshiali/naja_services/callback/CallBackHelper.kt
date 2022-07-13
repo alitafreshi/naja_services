@@ -30,22 +30,21 @@ fun <T> AppCompatActivity.handleNajaGatewayCallBackUrl(
                 ?.get(1)
 
 
-        if (product.isNotNull() && key.isNotNull() && paymentStatus.isNotNull()) {
+        if (product == NajaConstance.TRAFFIC_BY_PLATE) {
 
-            if (product == NajaConstance.TRAFFIC_BY_PLATE) {
+            startActivity(Intent(this, destinationActivity).also { intent ->
+                intent.putExtra(NajaConstance.NAJA_CALL_BACK_PRODUCT, product)
+                intent.putExtra(NajaConstance.KEY, key)
+                intent.putExtra(NajaGatewayConstance.PAYMENT_STATUS, paymentStatus)
+            })
 
-                startActivity(Intent(this, destinationActivity).also { intent ->
-                    intent.putExtra(NajaConstance.NAJA_CALL_BACK_PRODUCT, product)
-                    intent.putExtra(NajaConstance.KEY, key)
-                    intent.putExtra(NajaGatewayConstance.PAYMENT_STATUS, paymentStatus)
-                })
-
-            } else {
-                navigateToDestinationActivity(destinationActivity)
-            }
         } else {
-            navigateToDestinationActivity(destinationActivity)
+
+            startActivity(Intent(this, destinationActivity).also { intent ->
+                intent.putExtra(NajaConstance.NAJA_RESET_FLAG, true)
+            })
         }
+
     }
 }
 

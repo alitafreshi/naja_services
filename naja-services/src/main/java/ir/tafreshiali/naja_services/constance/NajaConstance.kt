@@ -6,6 +6,8 @@ object NajaConstance {
     const val TRAFFIC_BY_PLATE = "trafficByPlate"
 
     const val KEY = "key"
+
+    const val NAJA_RESET_FLAG="rest"
 }
 
 object NajaGatewayConstance {
