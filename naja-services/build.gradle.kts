@@ -51,14 +51,11 @@ dependencies {
     androidTestImplementation(Espresso.espresso)
 
     //ayan networking
-    implementation(ayan.Networking.gson)
-    implementation(ayan.Networking.gsonConvertor)
-    implementation(ayan.Networking.okhttp)
-    implementation(ayan.Networking.pishkhanNetworking)
+    compileOnly(ayan.Networking.pishkhanNetworking)
 
-    implementation(ayan.PishkhanCore.pishkhanCore)
+    compileOnly(ayan.PishkhanCore.pishkhanCore)
 
-    implementation(ayan.WhyGoogle.whyGoogle)
+    compileOnly(ayan.WhyGoogle.whyGoogle)
 }
 
 
@@ -81,7 +78,7 @@ afterEvaluate {
                 artifactId = "naja-services"
 
                 // Version Library Name (Example : "1.0.0")
-                version = "0.0.11"
+                version = "0.0.12"
             }
         }
     }
