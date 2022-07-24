@@ -53,7 +53,7 @@ dependencies {
     //ayan networking
     compileOnly(ayan.Networking.pishkhanNetworking)
 
-    compileOnly(ayan.PishkhanCore.pishkhanCore)
+    implementation(ayan.PishkhanCore.pishkhanCore)
 
     compileOnly(ayan.WhyGoogle.whyGoogle)
 }
@@ -78,7 +78,7 @@ afterEvaluate {
                 artifactId = "naja-services"
 
                 // Version Library Name (Example : "1.0.0")
-                version = "0.0.12"
+                version = "0.0.13"
             }
         }
     }
