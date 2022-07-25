@@ -10,6 +10,7 @@ object Endpoints {
     const val NajaServicesInquiryTrafficFinesCar = "NajaServicesInquiryTrafficFinesCar"	//	To Report Advertising Performance.
     const val NajaServicesInquiryTrafficFinesMotorcycle = "NajaServicesInquiryTrafficFinesMotorcycle"	//	To Report Advertising Performance.
     const val NajaServicesInquiryTrafficFinesCarSummary = "NajaServicesInquiryTrafficFinesCarSummary"	//	To Report Advertising Performance.
+    const val InquiryPostPackageTracking = "InquiryPostPackageTracking"
 
 
 }

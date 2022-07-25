@@ -8,4 +8,6 @@ object Product {
     const val InquiryNajaTrafficFinesCarSummary = "InquiryNajaTrafficFinesCarSummary"
     const val InquiryNajaTrafficFinesCar = "InquiryNajaTrafficFinesCar"
     const val InquiryNajaTrafficFinesMotorcycle = "InquiryNajaTrafficFinesMotorcycle"
+    const val InquiryPostPackageTracking = "InquiryPostPackageTracking"
+
 }
