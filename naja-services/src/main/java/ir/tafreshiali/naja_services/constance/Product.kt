@@ -9,5 +9,9 @@ object Product {
     const val InquiryNajaTrafficFinesCar = "InquiryNajaTrafficFinesCar"
     const val InquiryNajaTrafficFinesMotorcycle = "InquiryNajaTrafficFinesMotorcycle"
     const val InquiryPostPackageTracking = "InquiryPostPackageTracking"
+    const val InquiryNajaCarIdentificationDocumentsStatus =
+        "InquiryNajaCarIdentificationDocumentsStatus"
+    const val InquiryNajaExitBanStatus = "InquiryNajaExitBanStatus"
+
 
 }
