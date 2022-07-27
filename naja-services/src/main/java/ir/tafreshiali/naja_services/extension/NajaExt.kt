@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import ir.ayantech.ayannetworking.api.AyanApi
 import ir.ayantech.whygoogle.helper.fromJsonToObject
-import ir.tafreshiali.naja_services.callback.navigateToDestinationActivity
 import ir.tafreshiali.naja_services.constance.Endpoints
 import ir.tafreshiali.naja_services.constance.NajaConstance
 import ir.tafreshiali.naja_services.constance.NajaGatewayConstance
@@ -23,14 +22,14 @@ import ir.tafreshiali.naja_services.domain.NajiCallBackModel
  * @param onSuccessGatewayPayment for handling Whenever the payment is successful.
  * */
 
-fun <T> AppCompatActivity.handleCallBack(
-    failedDestinationActivity: Class<T>,
+fun Intent?.handleCallBack(
+    navigateBack: () -> Unit,
     onSuccessGatewayPayment: (Intent) -> Unit
 ) {
-    intent?.let {
+    this?.let {
 
         if (it.getBooleanExtra(NajaConstance.NAJA_RESET_FLAG, false)) {
-            navigateToDestinationActivity(failedDestinationActivity)
+            navigateBack()
             return
         }
 
@@ -50,30 +49,29 @@ fun <T> AppCompatActivity.handleCallBack(
  * @param failedDestinationActivity the destination activity that app should restart from it.
  * @param [product] [ayanApi]
  * @param handleNajaRelatedLogic a lambda function for handling the naja related logic. */
-inline fun <reified Input, T> AppCompatActivity.handleSuccessfulPayment(
-    failedDestinationActivity: Class<T>,
+inline fun <reified Input> Intent.handleSuccessfulPayment(
     product: String,
     ayanApi: AyanApi,
+    crossinline navigateBack: () -> Unit,
     crossinline handleNajaRelatedLogic: (input: Input) -> Unit
 ) {
-    intent?.let {
-        it.getStringExtra(NajaConstance.KEY)?.let { gateWayKey ->
-            ayanApi.simpleCall<NajaServicesPaymentRequestDataOutput>(
-                endPoint = Endpoints.NajaServicesPaymentRequestData,
-                input = NajaServicesPaymentRequestDataInput(gateWayKey),
-                onSuccess = { najaServicesPaymentDataOutput ->
-                    val najiCallBackModel =
-                        najaServicesPaymentDataOutput?.Data?.fromJsonToObject<NajiCallBackModel>()
+    this.getStringExtra(NajaConstance.KEY)?.let { gateWayKey ->
+        ayanApi.simpleCall<NajaServicesPaymentRequestDataOutput>(
+            endPoint = Endpoints.NajaServicesPaymentRequestData,
+            input = NajaServicesPaymentRequestDataInput(gateWayKey),
+            onSuccess = { najaServicesPaymentDataOutput ->
+                val najiCallBackModel =
+                    najaServicesPaymentDataOutput?.Data?.fromJsonToObject<NajiCallBackModel>()
 
-                    when (najiCallBackModel?.product) {
-                        product -> {
-                            handleNajaRelatedLogic(najiCallBackModel.input.fromJsonToObject<Input>())
-                        }
-                        else -> {
-                            navigateToDestinationActivity(failedDestinationActivity)
-                        }
+                when (najiCallBackModel?.product) {
+                    product -> {
+                        handleNajaRelatedLogic(najiCallBackModel.input.fromJsonToObject<Input>())
                     }
-                })
-        }
+                    else -> {
+                        navigateBack()
+                    }
+                }
+            })
+
     }
 }
